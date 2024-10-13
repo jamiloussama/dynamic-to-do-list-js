@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         li.textContent = taskText;
 
         // Create remove button
-        const removeBtn = document.createElement('button');
-        removeBtn.textContent = "Remove";
+        const removeButton = document.createElement('button');
+        removeButton.textContent = "Remove";
         removeButton.classList.add("remove-btn");
-        li.appendChild(removeBtn);
+        li.appendChild(removeButton);
 
         // Add the task to the task list (ul)
         taskList.appendChild(li);
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         taskInput.value = '';
 
         // Remove task when remove button is clicked
-        removeBtn.addEventListener('click', function () {
+        removeButton.addEventListener('click', function () {
             removeTask(taskText, li);
         });
     }
