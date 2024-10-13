@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to add a task (with optional saving to Local Storage)
     function addTask(taskText, save = true) {
-        if (taskText.trim() === "") {
+        if (taskText === "") {
             alert("Please enter a task.");
             return;
         }
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listener to add task on button click
     addButton.addEventListener('click', () => {
-        const taskText = taskInput.value;
+        const taskText = taskInput.value.trim();
         addTask(taskText); // Add task and save to Local Storage
     });
 
